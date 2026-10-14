@@ -106,6 +106,8 @@ Create, fetch, update, validation error, overlap, delete, and the 404 that follo
 
 ![Test suite](screenshots/tests.png)
 
+A longer walk-through of what was built, why each layer exists, and how a create request moves is in [LEARNING.md](LEARNING.md).
+
 ## Layout
 
 ```text
