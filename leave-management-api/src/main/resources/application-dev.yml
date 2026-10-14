@@ -1,0 +1,11 @@
+# Loaded when the dev profile is active. The default file keeps a shorter cap
+# so the profile difference is easy to see in the startup log.
+server:
+  port: 8080
+
+logging:
+  level:
+    com.rajasoftware.leavemanagement: DEBUG
+
+leave:
+  max-days: 30
