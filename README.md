@@ -13,15 +13,9 @@ docker exec mongo-basic-assignment mongosh --file /tmp/mongodb-advanced-assignme
 
 The script verifies that the invalid employee is rejected with schema validation error 121 and prints the actual `explain("executionStats")` values for this MongoDB server and dataset.
 
-## Run Task 6: backup and restore
+## Task 6: backup and restore
 
-After Tasks 1–5 complete successfully, run this once from PowerShell in this folder:
-
-```powershell
-.\backup-restore.ps1
-```
-
-The script creates a gzip archive named `company_advanced.archive`, saves a copy in this folder, and restores its collections into the new `company_advanced_restore` database. It refuses to restore if that target database already exists. It then prints the restored counts for employees, departments, and sessions.
+Task 6 was completed locally with `mongodump` and `mongorestore`. The gzip archive was restored into the separate `company_advanced_restore` database and its collection counts were verified. Backup/restore scripts and archive files are intentionally kept out of this GitHub submission.
 
 ## Connect and inspect
 
@@ -41,4 +35,4 @@ db.employees.getIndexes()
 
 ## Re-running against a fresh database
 
-Both scripts protect existing data rather than dropping databases. Use a fresh MongoDB container or another unused database and update the database names in the scripts only if you need to repeat the assignment from the beginning.
+The task script refuses to reuse an existing `company_advanced` database. Use a fresh MongoDB container or another unused database if you need to repeat Tasks 1–5.
